@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="flex items-center gap-4">
+        {/* <nav className="flex items-center gap-4">
           <Button variant="ghost" size="sm" asChild>
             <a
               href="https://github.com"
@@ -30,7 +30,7 @@ const Header = () => {
               <span className="hidden sm:inline">GitHub</span>
             </a>
           </Button>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );
