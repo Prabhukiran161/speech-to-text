@@ -1,6 +1,6 @@
-import React from 'react';
-import { AudioLines, Github } from 'lucide-react';
-import { Button } from './ui/button';
+import React from "react";
+import { AudioLines, FileText } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Header = () => {
   return (
@@ -12,19 +12,21 @@ const Header = () => {
           </div>
           <div>
             <h1 className="text-lg font-bold gradient-text">VoiceScribe</h1>
-            <p className="text-xs text-muted-foreground">Real-time Speech to Text</p>
+            <p className="text-xs text-muted-foreground">
+              Real-time Speech to Text
+            </p>
           </div>
         </div>
 
         <nav className="flex items-center gap-4">
           <Button variant="ghost" size="sm" asChild>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
+            <a
+              href="https://github.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <Github className="w-4 h-4" />
+              <FileText className="w-4 h-4" />
               <span className="hidden sm:inline">GitHub</span>
             </a>
           </Button>

@@ -1,12 +1,12 @@
 import React from "react";
 import { Zap, Shield, Globe, Clock } from "lucide-react";
-import Header from "../components/Header";
-import RecordButton from "../components/RecordButton";
-import AudioWaveform from "../components/AudioWaveform";
-import TranscriptionDisplay from "../components/TranscriptionDisplay";
-import StatusIndicator from "../components/StatusIndicator";
-import FeatureCard from "../components/FeatureCard";
-import useSpeechRecognition from "../hooks/useSpeechRecognition";
+import Header from "../Header";
+import RecordButton from "../RecordButton";
+import AudioWaveform from "../AudioWaveform";
+import TranscriptionDisplay from "../TranscriptionDisplay";
+import StatusIndicator from "../StatusIndicator";
+import FeatureCard from "../FeatureCard";
+import useSpeechRecognition from "../../hooks/useSpeechRecognition";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -54,7 +54,7 @@ const Index = () => {
     {
       icon: Globe,
       title: "Multi-Language",
-      description: "Support for multiple language accents",
+      description: "Support for multiple languages and accents",
     },
     {
       icon: Shield,
@@ -103,7 +103,7 @@ const Index = () => {
                 <RecordButton
                   isRecording={isRecording}
                   onClick={handleRecordClick}
-                  disabled={!!error && error.includes("not supported")}
+                  disabled={status === "connecting"}
                 />
               </div>
 
